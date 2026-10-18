@@ -36,12 +36,18 @@ js/data/
 js/views/
   home.js, guide.js, calendar.js
   components/form-field.js     Shared question renderer (choice, date)
+  components/icons.js          Inline Lucide SVG icons for cards and buttons
 ```
+
+## Design
+
+Based on the user's Bolt template (warm paper palette, green accent, Fraunces headings, Inter body, rounded cards with soft shadows), rebuilt in plain CSS so the site keeps working without a build step. Card icons and accent colors per guide live in `js/views/home.js` (`GUIDE_VISUALS`).
 
 ## Adding a new life-event guide
 
 1. Create `js/data/guides/<name>.js` exporting an object with `id`, `title`, `summary`, `questions`, `phases`, `steps` (same shape as `moving.js`).
 2. Import it in `js/data/guides/index.js` and add it to `guides` (remove it from `upcomingGuides`).
+3. Give it an icon and accent in `GUIDE_VISUALS` in `js/views/home.js`.
 
 Steps support optional `appliesTo(answers)`, `deadline(answers) -> { date, kind: 'legal' | 'suggested' }`, `documents` and `link`.
 

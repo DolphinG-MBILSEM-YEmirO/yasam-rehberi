@@ -65,5 +65,24 @@ document.querySelector('.skip-link')?.addEventListener('click', (event) => {
   document.getElementById('app').focus();
 });
 
+// Sticky header gets a background once the page scrolls; the back-to-top
+// button appears on long pages.
+const header = document.querySelector('.site-header');
+const backToTop = document.querySelector('.back-to-top');
+
+function onScroll() {
+  header?.classList.toggle('site-header--scrolled', window.scrollY > 24);
+  const showBackToTop = window.scrollY > 800;
+  backToTop?.classList.toggle('back-to-top--visible', showBackToTop);
+  backToTop?.setAttribute('tabindex', showBackToTop ? '0' : '-1');
+}
+
+backToTop?.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.getElementById('app').focus({ preventScroll: true });
+});
+
+window.addEventListener('scroll', onScroll, { passive: true });
 window.addEventListener('hashchange', render);
 render();
+onScroll();
