@@ -7,11 +7,14 @@ import { buyingCarGuide } from './buying-car.js';
 import { marriageGuide } from './marriage.js';
 import { leavingJobGuide } from './leaving-job.js';
 import { retirementGuide } from './retirement.js';
+import { bereavementGuide } from './bereavement.js';
 
-export const guides = [movingGuide, newBabyGuide, buyingCarGuide, marriageGuide, leavingJobGuide, retirementGuide];
+export const guides = [movingGuide, newBabyGuide, buyingCarGuide, marriageGuide, leavingJobGuide, retirementGuide, bereavementGuide];
 
 // Planned guides shown on the home page as "coming soon".
-export const upcomingGuides = [];
+export const upcomingGuides = [
+  { title: 'Askerlik', summary: 'Yoklama, sevk, bedelli askerlik ve terhis sonrası işler.' },
+];
 
 export function findGuide(id) {
   return guides.find((guide) => guide.id === id) || null;

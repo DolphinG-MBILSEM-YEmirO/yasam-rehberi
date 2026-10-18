@@ -31,6 +31,7 @@ js/data/
   guides/marriage.js           "Evlilik" questions, phases and steps
   guides/leaving-job.js        "İşten ayrılma" questions, phases and steps
   guides/retirement.js         "Emeklilik" questions, phases and steps
+  guides/bereavement.js        "Vefat sonrası işlemler" questions, phases and steps
   calendar-rules.js            Official calendar fields and date rules
 js/views/
   home.js, guide.js, calendar.js
@@ -56,6 +57,7 @@ Steps support optional `appliesTo(answers)`, `deadline(answers) -> { date, kind:
 - Married woman's surname after the Constitutional Court annulled TMK 187: [Tahancı Hukuk](https://www.tahanci.av.tr/kadinin-soyadi-evlilikle-degismeyecek-tmk-m-187/) (practice still settling)
 - Unemployment benefit (600 days in 3 years, last 120 days, apply within 30 days, 180/240/300 days, 40% capped at 80% of gross minimum wage): [İş Bankası](https://www.isbank.com.tr/blog/issizlik-maasi-nasil-alinir)
 - Retirement: pension starts the month after the written application, 4A workers must leave the job first: [Cottgroup](https://cottgroup.com/tr/mevzuat/item/emekli-olmak-icin-isten-ayrilma-ve-yazili-talep-sartlari); last-7-years rule for merged service: [Memurlar.net](https://www.memurlar.net/haber/1178184/); application and status tracking: [Kariyer.net](https://www.kariyer.net/ik-blog/?p=14488)
+- After a death (heirship certificate, 3-month inheritance rejection, 4-month inheritance tax return): [Or Hukuk](https://or.av.tr/olumden-sonra-yapilmasi-gereken-resmi-islemler-2025-guncel-rehber/); 2026 inheritance tax exemption (2,907,136 TL per child or spouse): [Hukukçular Evi](https://hukukcularevi.com/veraset-ve-intikal-vergisi-beyan-ve-odeme/)
 - e-Devlet service URLs taken from turkiye.gov.tr search results.
 
 Known limitation: business-day math skips weekends and fixed national holidays but not religious holidays.
